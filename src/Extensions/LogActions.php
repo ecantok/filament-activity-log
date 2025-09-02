@@ -5,7 +5,6 @@ namespace Noxo\FilamentActivityLog\Extensions;
 use Closure;
 use Filament\Actions as PageActions;
 use Filament\Resources\RelationManagers\RelationManager;
-use Filament\Tables\Actions as TableActions;
 use Filament\Tables\Columns;
 
 class LogActions
@@ -18,21 +17,15 @@ class LogActions
 
     public array $targets = [
         // * ----------- Table Actions -----------
-        // TableActions\AssociateAction::class => 'associate',
-        TableActions\AttachAction::class => 'attach',
-        TableActions\CreateAction::class => 'create',
-        TableActions\DeleteAction::class => 'delete',
-        TableActions\DeleteBulkAction::class => 'deleteBulk',
-        TableActions\DetachAction::class => 'detach',
-        TableActions\DetachBulkAction::class => 'detachBulk',
-        // TableActions\DissociateAction::class => 'dissociate',
-        // TableActions\DissociateBulkAction::class => 'dissociateBulk',
-        TableActions\EditAction::class => 'edit',
-        TableActions\ForceDeleteAction::class => 'delete',
-        TableActions\ForceDeleteBulkAction::class => 'deleteBulk',
-        TableActions\ReplicateAction::class => 'create',
-        TableActions\RestoreAction::class => 'restore',
-        TableActions\RestoreBulkAction::class => 'restoreBulk',
+        // PageActions\AssociateAction::class => 'associate',
+        PageActions\AttachAction::class => 'attach',
+        PageActions\DeleteBulkAction::class => 'deleteBulk',
+        PageActions\DetachAction::class => 'detach',
+        PageActions\DetachBulkAction::class => 'detachBulk',
+        // PageActions\DissociateAction::class => 'dissociate',
+        // PageActions\DissociateBulkAction::class => 'dissociateBulk',
+        PageActions\ForceDeleteBulkAction::class => 'deleteBulk',
+        PageActions\RestoreBulkAction::class => 'restoreBulk',
 
         // * ----------- Page Actions -----------
         PageActions\CreateAction::class => 'create',

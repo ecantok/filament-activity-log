@@ -2,7 +2,7 @@
 
 <div
     @class([
-        'p-2 space-y-2 bg-white rounded-xl shadow group',
+        'p-2 flex flex-col gap-2 bg-white rounded-xl shadow group',
         'dark:border-gray-600 dark:bg-gray-900',
     ])
     x-data="{

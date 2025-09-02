@@ -44,7 +44,7 @@
         </div>
     @endif
 
-    <div class="space-y-4">
+    <div class="flex flex-col gap-4 p-4">
         @php
             $prevDate = null;
         @endphp
@@ -88,9 +88,9 @@
 
         @if ($activities->isNotEmpty())
             <x-filament::pagination
-                :page-options="$this->getTableRecordsPerPageSelectOptions()"
+                currentPageOptionProperty="recordsPerPage"
+                :page-options="$this->getRecordsPerPageSelectOptions()"
                 :paginator="$this->getActivities()"
-                class="px-3 py-3 sm:px-6"
             />
         @endif
     </div>
